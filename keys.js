@@ -17,8 +17,8 @@ var keys = {
     },
 
     twilio: {
-        accountSid: 'ACdce6e355969021eedd82046da5ec07a7',
-        authToken: '013f4d20f8f8124d3e0f51bf79556de8'
+        accountSid: 'AC48bded9a3b89b9b915d0dd20dfeb85e2',
+        authToken: '1d55abc6a01ce90e92355fa5e02d7850'
     }
 }
 

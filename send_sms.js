@@ -1,5 +1,4 @@
 const https = require('https');
-
 const keys = require('./keys');
 
 const accountSid = keys.twilio.accountSid;
@@ -15,18 +14,19 @@ function sendSms(alertMessage, sensor, value) {
     client.messages
         .create({
             body: msg,
-            from: '+13347593242',
+            from: '+12058283422',
             to: '+94711765356'
         })
         .then(message => console.log(message.sid));
 }
 
 function validateSms(map){
-    if(map.temp > 40){
+
+    if(map.temp > 35){
         sendSms("High Temperature", "Temperature", map.temp);
     }
 
-    if(map.hum > 50){
+    if(map.hum > 60){
         sendSms("High Humidity", "Humidity", map.hum);
     }
 
@@ -34,7 +34,7 @@ function validateSms(map){
         sendSms("Dangerous sound level", "Sound", map.sound);
     }
 
-    if(map.air > 60){
+    if(map.air > 150){
         sendSms("Bad air condition", "Air Quality", map.air);
     }
 }

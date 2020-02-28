@@ -34,8 +34,8 @@ client.on('message', (topic, message) => {
         var map = {
             temp : data[0],
             hum : data[1],
-            sound: data[2],
-            air: data[3]
+            sound: data[3],
+            air: data[2]
         }
 
         console.log(map.temp);    

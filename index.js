@@ -18,14 +18,6 @@ client.on('connect', () => {
 });
 
 client.on('message', (topic, message) => {
-    // if(topic === 'data'){  
-    //     console.log(message)
-    //     console.log(JSON.parse(message.toString()));
-    //     var data = JSON.parse(message.toString());
-    //     writeData(data);
-    //     sendSms(data); 
-    // }
-
     if(message.toString() !== "Data not received"){
         var data = message.toString().split(':-')[1].split(',');
 
@@ -38,7 +30,7 @@ client.on('message', (topic, message) => {
             air: data[2]
         }
 
-        console.log(map.temp);    
+        //console.log(map.temp);    
 
         try{
             writeData(map);

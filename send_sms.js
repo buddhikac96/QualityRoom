@@ -21,7 +21,7 @@ function sendSms(alertMessage, sensor, value, map) {
         .create({
             body: msg,
             from: '+13233103343',
-            to: '+94711765356, +94772278461'
+            to: '+94711765356'
         })
         .then(message => console.log(message.sid));
 }

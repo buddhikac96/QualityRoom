@@ -6,5 +6,7 @@
     "sourceDir": "/usr/dev/iot/Room-Automation-System---IoT",
     "logFile": "/usr/dev/iot/Room-Automation-System---IoT/log/forever.log",
     "outFile": "/usr/dev/iot/Room-Automation-System---IoT/log/out.log",
-    "errFile": "/usr/dev/iot/Room-Automation-System---IoT/log/error.log"
+    "errFile": "/usr/dev/iot/Room-Automation-System---IoT/log/error.log",
+    "minUptime" : 1000 , 
+    "spinSleepTime" : 1000
 }

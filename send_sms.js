@@ -35,10 +35,10 @@ function validateSms(map){
         allowSendSMSTemp = true;
     }
 
-    if(map.hum >= 65 && allowSendSMSHum){
+    if(map.hum >= 80 && allowSendSMSHum){
         sendSms("High Humidity", "Humidity", map.hum, map);
         allowSendSMSHum = false;
-    }else if(map.hum < 65){
+    }else if(map.hum < 80){
         allowSendSMSHum = true;
     }
 

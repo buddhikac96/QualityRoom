@@ -1,7 +1,7 @@
 const keys = require('./keys');
 var mqtt = require('mqtt');
 var con = require('./db');
-var sms = require('./send_sms');
+//var sms = require('./send_sms');
 var writeData = require('./data_handler');
 
 var options = keys.options;
@@ -34,7 +34,7 @@ client.on('message', (topic, message) => {
 
         try{
             writeData(map);
-            sms.validateSms(map);
+            //sms.validateSms(map);
         }catch(err){
             console.log(err);
         }

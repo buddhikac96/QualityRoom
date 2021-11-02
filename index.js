@@ -21,7 +21,7 @@ client.on('connect', () => {
     });
 });
 
-client.on('message', (topic, message, packet) => {
+client.on('message', (topic, message) => {
     console.log("Message recieved");
     if(message.toString() !== "Data not received"){
         var data = message.toString().split(':-')[1].split(',');

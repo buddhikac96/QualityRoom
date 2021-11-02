@@ -14,7 +14,11 @@ con.connect((err) => {
 
 client.on('connect', () => {
     console.log("MQTT Connected...");
-    client.subscribe('data');
+    client.subscribe('data', (err) => {
+        if(!err){
+            console.log("Subscribed to data");
+        }
+    });
 });
 
 client.on('message', (topic, message, packet) => {

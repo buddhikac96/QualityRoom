@@ -13,11 +13,12 @@ con.connect((err) => {
 });
 
 client.on('connect', () => {
-    console.log("Connected...");
+    console.log("MQTT Connected...");
     client.subscribe('data');
 });
 
-client.on('message', (topic, message) => {
+client.on('message', (topic, message, packet) => {
+    console.log("Message recieved");
     if(message.toString() !== "Data not received"){
         var data = message.toString().split(':-')[1].split(',');
 

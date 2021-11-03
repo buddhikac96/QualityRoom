@@ -5,7 +5,7 @@ var con = require('./db');
 var writeData = require('./data_handler');
 
 var options = keys.options;
-const client = mqtt.connect('mqtt://test.mosquitto.org');
+const client = mqtt.connect('mqtt://tailor.cloudmqtt.com');
 
 con.connect((err) => {
     if(err) throw err;

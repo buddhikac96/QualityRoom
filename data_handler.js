@@ -10,7 +10,7 @@ var writeData = (data) => {
             console.log(result);
         });
     }catch(err){
-        throw err;
+        console.log("SQL Error");
     }
     
 }

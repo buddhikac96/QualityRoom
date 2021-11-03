@@ -32,6 +32,18 @@ client.on('message', (topic, message) => {
 
         console.log(message.toString());
 
+        if(temp.toString() === ""){
+            temp = -1;
+        }
+
+        if(hum.toString() === ""){
+            hum = -1;
+        }
+
+        if(air.toString() === ""){
+            air = -1;
+        }
+
         var map = {
             temp : temp,
             hum : hum,

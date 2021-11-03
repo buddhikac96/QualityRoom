@@ -32,15 +32,15 @@ client.on('message', (topic, message) => {
 
         console.log(message.toString());
 
-        if(isNaN(temp)){
+        if(isNaN(temp) || temp.toString() == ""){
             temp = -1;
         }
 
-        if(isNaN(hum)){
+        if(isNaN(hum) || hum.toString() == ""){
             hum = -1;
         }
 
-        if(isNaN(air)){
+        if(isNaN(air) || air.toString() == ""){
             air = -1;
         }
 

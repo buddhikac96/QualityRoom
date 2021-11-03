@@ -27,7 +27,7 @@ client.on('message', (topic, message) => {
     if(message.toString() !== "Data not received"){
         //var data = message.toString().split(':-')[1].split(',');
 
-        console.log(data)
+        console.log(message.toString());
 
         // var map = {
         //     temp : data[0],

@@ -5,6 +5,7 @@ var con = require('./db');
 var writeData = require('./data_handler');
 
 var options = keys.options;
+console.log(options);
 const client = mqtt.connect('mqtt://soldier.cloudmqtt.com', options);
 
 con.connect((err) => {
@@ -17,6 +18,7 @@ client.on('connect', () => {
     client.subscribe('data', (err) => {
         if(!err){
             console.log("Subscribed to data");
+            client.publish('presence', 'Hello mqtt')
         }
     });
 });

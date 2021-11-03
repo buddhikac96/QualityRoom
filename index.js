@@ -25,21 +25,24 @@ client.on('connect', () => {
 client.on('message', (topic, message) => {
     console.log("Message recieved");
     if(message.toString() !== "Data not received"){
-        //var data = message.toString().split(':-')[1].split(',');
+        var data = message.toString().split(',');
+        var temp = data[0].split(":")[1];
+        var hum = data[1].split(":")[1];
+        var air = data[2].split(":")[1];
 
         console.log(message.toString());
 
-        // var map = {
-        //     temp : data[0],
-        //     hum : data[1],
-        //     sound: data[3],
-        //     air: data[2]
-        // }
+        var map = {
+            temp : temp,
+            hum : hum,
+            sound: 0,
+            air: air
+        }
 
         //console.log(map.temp);    
 
         try{
-            //writeData(map);
+            writeData(map);
             //sms.validateSms(map);
         }catch(err){
             console.log(err);

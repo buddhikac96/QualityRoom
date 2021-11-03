@@ -12,14 +12,13 @@ con.connect((err) => {
     console.log("Database connected");
 });
 
-client.on('connect', () => {
-    console.log("MQTT Connected...");
-    client.subscribe('data', (err) => {
-        if(!err){
-            console.log("Subscribed to data");
-        }
-    });
-});
+client.on('connect', function () {
+    client.subscribe('data', function (err) {
+      if (!err) {
+        client.publish('presence', 'Hello mqtt')
+      }
+    })
+  })
 
 client.on('message', (topic, message) => {
     console.log("Message recieved");

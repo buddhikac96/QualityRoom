@@ -29,17 +29,17 @@ client.on('message', (topic, message) => {
 
         console.log(data)
 
-        var map = {
-            temp : data[0],
-            hum : data[1],
-            sound: data[3],
-            air: data[2]
-        }
+        // var map = {
+        //     temp : data[0],
+        //     hum : data[1],
+        //     sound: data[3],
+        //     air: data[2]
+        // }
 
         //console.log(map.temp);    
 
         try{
-            writeData(map);
+            //writeData(map);
             //sms.validateSms(map);
         }catch(err){
             console.log(err);

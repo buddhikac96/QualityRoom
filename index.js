@@ -6,7 +6,7 @@ var writeData = require('./data_handler');
 
 var options = keys.options;
 console.log(options);
-const client = mqtt.connect('tailor.cloudmqtt.com', options);
+const client = mqtt.connect('tailor.cloudmqtt.com');
 
 con.connect((err) => {
     if(err) throw err;

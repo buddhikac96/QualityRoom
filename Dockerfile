@@ -8,5 +8,6 @@ EXPOSE 3000
 
 RUN npm install
 RUN npm install -g nodemon
+RUN npm install -g forever
 
-CMD ["nodemon" , "server.js"]
+CMD ["forever" , "start" , "server.js"]

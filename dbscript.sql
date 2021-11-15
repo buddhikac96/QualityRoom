@@ -5,11 +5,11 @@ create table Sensor_Data(
     AirQuality Float NULL 
 );
 
-insert into Sensor_Data(Temperature,Humidity,AirQuality) 
-values (23.5, 75.4, 13,2);
+INSERT INTO `Sensor_Data` (`Time_Stamp`, `Temperature`, `Humidity`, `AirQuality`) /
+VALUES (CURRENT_TIMESTAMP, '25.5', '76', '13'), (CURRENT_TIMESTAMP, '24', '78', '15');
 
-insert into Sensor_Data(Temperature,Humidity,AirQuality) 
-values (24.5, 78.4, 12,2);
+INSERT INTO `Sensor_Data` (`Time_Stamp`, `Temperature`, `Humidity`, `AirQuality`) /
+VALUES (CURRENT_TIMESTAMP, '23.5', '78', '15'), (CURRENT_TIMESTAMP, '24', '78', '15');
 
-insert into Sensor_Data(Temperature,Humidity,AirQuality) 
-values (25.5, 81.4, 11,2);
+INSERT INTO `Sensor_Data` (`Time_Stamp`, `Temperature`, `Humidity`, `AirQuality`) /
+VALUES (CURRENT_TIMESTAMP, '26.5', '74', '14'), (CURRENT_TIMESTAMP, '24', '78', '15');

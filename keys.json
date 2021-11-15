@@ -1,9 +1,9 @@
 {
     "db": {
-        "host": "remotemysql.com",
-        "username": "RWMI0Noqkt",
-        "password": "aZefXdFX2z",
-        "database": "RWMI0Noqkt"
+        "host": "database",
+        "username": "root",
+        "password": "my-secret-pw",
+        "database": "test"
     },
     "options": {
         "port": 14183,

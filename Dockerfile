@@ -1,4 +1,4 @@
-FROM nodejs:latest
+FROM node
 
 WORKDIR /home/apps/server
 

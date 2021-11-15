@@ -1,0 +1,14 @@
+{
+    "db": {
+        "host": "remotemysql.com",
+        "username": "RWMI0Noqkt",
+        "password": "aZefXdFX2z",
+        "database": "RWMI0Noqkt"
+    },
+    "options": {
+        "port": 14183,
+        "host": "mqtt://tailor.cloudmqtt.com",
+        "username": "ileliujf",
+        "password": "or_W8gVd5_XD"
+    }
+}

@@ -30,5 +30,8 @@ services:
     image: "grafana/grafana:latest"
     ports:
       - "3030:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana grafana/grafana-enterprise
 volumes:
   data:
+  grafana-storage:

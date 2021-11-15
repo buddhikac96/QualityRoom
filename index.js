@@ -17,7 +17,7 @@ client.on('connect', () => {
     client.subscribe('data', (err) => {
         if(!err){
             console.log("Subscribed to data");
-            client.publish('presence', 'Hello mqtt')
+            //client.publish('presence', 'Hello mqtt')
         }
     });
 });
@@ -47,7 +47,6 @@ client.on('message', (topic, message) => {
         var map = {
             temp : temp,
             hum : hum,
-            sound: 0,
             air: air
         }
 

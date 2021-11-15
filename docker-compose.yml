@@ -25,5 +25,9 @@ services:
     restart: always
     ports:
       - "8080:80"
+  grafana:
+    image: "grafana/grafana:latest"
+    ports:
+      - "3030:3000"
 volumes:
   data:

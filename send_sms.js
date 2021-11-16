@@ -19,7 +19,7 @@ function sendSms(alertMessage, sensor, value, map) {
     client.messages
         .create({
             body: msg,
-            from: '+13233103343',
+            from: '8559534541',
             to: '+94767741096'
         })
         .then(message => console.log(message.sid));

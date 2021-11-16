@@ -29,6 +29,8 @@ function sendSms(alertMessage, sensor, value, map) {
 
 function validateSms(map){
 
+    console.log("Validating SMS");
+    
     if(map.temp >= 31 && allowSendSMSTemp){
         sendSms("High Temperature", "Temperature", map.temp, map);
         allowSendSMSTemp = false;

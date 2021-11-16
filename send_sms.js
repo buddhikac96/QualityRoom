@@ -23,6 +23,8 @@ function sendSms(alertMessage, sensor, value, map) {
             to: '+94767741096'
         })
         .then(message => console.log(message.sid));
+    
+    console.log("SMS Sent");
 }
 
 function validateSms(map){

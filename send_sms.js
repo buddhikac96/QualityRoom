@@ -14,6 +14,8 @@ var allowSendSMSAir = true;
 
 function sendSms(alertMessage, sensor, value, map) {
 
+    console.log("Sending SMS . . .");
+
     var msg = createMessage(alertMessage, sensor, value, map);
 
     client.messages
@@ -30,7 +32,7 @@ function sendSms(alertMessage, sensor, value, map) {
 function validateSms(map){
 
     console.log("Validating SMS");
-    
+
     if(map.temp >= 31 && allowSendSMSTemp){
         sendSms("High Temperature", "Temperature", map.temp, map);
         allowSendSMSTemp = false;

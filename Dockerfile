@@ -10,4 +10,4 @@ RUN npm install
 RUN npm install -g nodemon
 RUN npm install -g forever
 
-CMD ["forever" , "start" , "server.js"]
+CMD ["forever" , "start" , "index.js"]

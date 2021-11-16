@@ -2,10 +2,10 @@ const mysql = require('mysql');
 const keys = require('./keys');
 
 var con = mysql.createConnection({
-    host: "database",
+    host: "8.218.233.170:3306",
     user: "root",
     password: "my-secret-pw",
-    database : "test"
+    database : "iot"
   });
 
 module.exports = con;

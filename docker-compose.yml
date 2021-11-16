@@ -47,10 +47,24 @@ services:
             - databasenet-phpmyadmin
 
   grafana:
-    image: "grafana/grafana:latest"
-    container_name: "grafanaserver"
+    image: grafana/grafana
+    container_name: grafana
     ports:
-      - "3030:3000"
+      - 3030:3000
+    volumes:
+      - /home/grafana:/var/lib/grafana
+      - /home/certs:/certs
+    env_file:
+      - /docker_data/grafana_conf/config.monitoring 
+    environment:
+      - HTTP_USER=admin
+      - HTTP_PASS=password
+      - MYSQLDB_HOST=database
+      - MYSQLDB_PORT=3306
+      - MYSQLDB_NAME=iot
+      - MYSQLDB_USER=root
+      - MYSQLDB_PASS=my-secret-pw
+    restart: always
     networks:
       databasenet:
         aliases:

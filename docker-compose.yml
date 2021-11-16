@@ -8,6 +8,10 @@ services:
       - "3000:3000"
     depends_on: 
       - database
+    networks:
+      databasenet:
+        aliases:
+            - databasenet-server
 
   database:
     image: "mysql:latest"
@@ -21,7 +25,9 @@ services:
       MYSQL_ROOT_PASSWORD: my-secret-pw
       MYSQL_DATABASE: iot
     networks:
-      - databasenet
+      databasenet:
+        aliases:
+            - databasenet-database
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -47,4 +53,4 @@ volumes:
   data:
 
 networks:
-  databasenet:
+  databasenet: {}

@@ -1,6 +1,6 @@
 {
     "db": {
-        "host": "localhost:3306",
+        "host": "database",
         "username": "root",
         "password": "my-secret-pw",
         "database": "test"

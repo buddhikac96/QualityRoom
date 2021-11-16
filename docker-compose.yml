@@ -41,12 +41,20 @@ services:
     restart: always
     ports:
       - "8080:80"
+    networks:
+      databasenet:
+        aliases:
+            - databasenet-phpmyadmin
 
   grafana:
     image: "grafana/grafana:latest"
     container_name: "grafanaserver"
     ports:
       - "3030:3000"
+    networks:
+      databasenet:
+        aliases:
+            - databasenet-grafana
 
 
 volumes:

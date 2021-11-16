@@ -9,5 +9,6 @@ EXPOSE 3000
 RUN npm install
 RUN npm install -g nodemon
 RUN npm install -g forever
+RUN npm install forever-monitor
 
-CMD ["nodemon", "index.js"]
+CMD ["forever", "start" , "forever.json"]

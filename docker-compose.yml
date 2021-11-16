@@ -55,7 +55,7 @@ services:
       - /home/grafana:/var/lib/grafana
       - /home/certs:/certs
     env_file:
-      - /docker_data/grafana_conf/config.monitoring 
+      - /home/grafana_conf/config.monitoring 
     environment:
       - HTTP_USER=admin
       - HTTP_PASS=password

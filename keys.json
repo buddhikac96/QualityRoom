@@ -12,7 +12,7 @@
         "password": "or_W8gVd5_XD"
     },
     "twilio" : {
-        "accountSid": "AC42a741ebb8df39e27b25fd7f5622ba5f",
-        "authToken": "ec606674e2a017d748232def4c0c60ad"
+        "accountSid": "",
+        "authToken": ""
     }
 }

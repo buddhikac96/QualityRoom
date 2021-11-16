@@ -20,6 +20,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: my-secret-pw
       MYSQL_DATABASE: iot
+    networks:
+      - databasenet
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -39,5 +41,10 @@ services:
     container_name: "grafanaserver"
     ports:
       - "3030:3000"
+
+
 volumes:
   data:
+
+networks:
+  databasenet:

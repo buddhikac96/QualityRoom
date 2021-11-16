@@ -20,7 +20,6 @@ client.on('connect', () => {
     client.subscribe('data', (err) => {
         if(!err){
             console.log("Subscribed to data");
-            //client.publish('presence', 'Hello mqtt')
         }
     });
 });

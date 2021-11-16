@@ -3,6 +3,7 @@ services:
 
   server:
     build: .
+    container_name: "nodejs server"
     ports:
       - "3000:3000"
     depends_on: 
@@ -10,6 +11,7 @@ services:
 
   database:
     image: "mysql:latest"
+    container_name: database
     restart: always
     volumes: 
       - ./data:/var/lib/mysql
@@ -34,6 +36,7 @@ services:
 
   grafana:
     image: "grafana/grafana:latest"
+    container_name: "grafana server"
     ports:
       - "3030:3000"
 volumes:

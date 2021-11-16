@@ -3,7 +3,7 @@ services:
 
   server:
     build: .
-    container_name: "nodejs server"
+    container_name: "nodejsserver"
     ports:
       - "3000:3000"
     depends_on: 

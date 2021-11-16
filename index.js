@@ -8,7 +8,10 @@ var options = keys.options;
 const client = mqtt.connect('mqtt://tailor.cloudmqtt.com', options);
 
 con.connect((err) => {
-    if(err) throw err;
+    if(err){
+        console.log(err);
+        throw err;
+    } 
     console.log("Database connected");
 });
 

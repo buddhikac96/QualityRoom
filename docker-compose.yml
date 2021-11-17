@@ -40,7 +40,7 @@ services:
       PMA_ARBITRARY: 1
     restart: always
     ports:
-      - "8080:80"
+      - "8000:80"
     networks:
       databasenet:
         aliases:

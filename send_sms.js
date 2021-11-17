@@ -39,6 +39,7 @@ function validateSms(map){
     let time = d.getTime();
 
     if((time - lastSmsTimeStamp) < 1000 * 60 * 2){
+        console.log("too soon for a alert . . .");
         return;
     }
 

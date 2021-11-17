@@ -11,6 +11,8 @@ var allowSendSMSTemp = true;
 var allowSendSMSHum = true;
 var allowSendSMSAir = true;
 
+var lastSmsTimeStamp;
+
 
 function sendSms(alertMessage, sensor, value, map) {
 
@@ -33,6 +35,15 @@ function validateSms(map){
 
     console.log("Validating SMS");
 
+    const d = new Date();
+    let time = d.getTime();
+
+    if((time - lastSmsTimeStamp) < 1000 * 60 * 2){
+        return;
+    }
+
+    lastSmsTimeStamp = time;
+
     if(map.temp >= 35 && allowSendSMSTemp){
         sendSms("High Temperature", "Temperature", map.temp, map);
         allowSendSMSTemp = false;
@@ -40,10 +51,10 @@ function validateSms(map){
         allowSendSMSTemp = true;
     }
 
-    if(map.hum >= 90 && allowSendSMSHum){
+    if(map.hum >= 100 && allowSendSMSHum){
         sendSms("High Humidity", "Humidity", map.hum, map);
         allowSendSMSHum = false;
-    }else if(map.hum < 90){
+    }else if(map.hum < 100){
         allowSendSMSHum = true;
     }
 

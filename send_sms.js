@@ -11,8 +11,8 @@ var allowSendSMSTemp = true;
 var allowSendSMSHum = true;
 var allowSendSMSAir = true;
 
-var lastSmsTimeStamp;
-
+const d = new Date();
+var lastSmsTimeStamp = d.getTime();
 
 function sendSms(alertMessage, sensor, value, map) {
 
@@ -35,8 +35,7 @@ function validateSms(map){
 
     console.log("Validating SMS");
 
-    const d = new Date();
-    let time = d.getTime();
+    var time = d.getTime();
 
     if((time - lastSmsTimeStamp) < 1000 * 60 * 2){
         console.log("too soon for a alert . . .");

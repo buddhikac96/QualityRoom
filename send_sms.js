@@ -44,7 +44,7 @@ function validateSms(map){
 
     lastSmsTimeStamp = time;
 
-    if(map.temp >= 35 && allowSendSMSTemp){
+    if(map.temp >= 31 && allowSendSMSTemp){
         sendSms("High Temperature", "Temperature", map.temp, map);
         allowSendSMSTemp = false;
     }else if(map.temp < 31){
